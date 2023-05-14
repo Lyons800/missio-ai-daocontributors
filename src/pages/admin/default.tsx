@@ -1,4 +1,5 @@
-import { Box, Flex, SimpleGrid, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Flex, SimpleGrid, Text, useColorModeValue, Button } from '@chakra-ui/react'
+import { signIn, signOut, useSession } from 'next-auth/react' // Import the necessary NextAuth components
 import Card from 'components/card/Card'
 import CustomCard from 'components/card/Card'
 import ActiveGovernanceChart from 'components/charts/ActiveGovernanceChart'
@@ -13,6 +14,9 @@ export default function UserReports() {
     // Chakra Color Mode
     const brandColor = useColorModeValue('brand.500', 'white')
     const boxBg = useColorModeValue('secondaryGray.300', 'whiteAlpha.100')
+    
+    // NextAuth session hook
+    const { data: session } = useSession();
 
     return (
         <AdminLayout>
@@ -43,6 +47,13 @@ export default function UserReports() {
                         </SimpleGrid>
 
                         <CustomCard>Your Content</CustomCard>
+
+                        {/* NextAuth Connect Button */}
+                        {session ? (
+                          <Button onClick={() => signOut()}>Sign out</Button>
+                        ) : (
+                          <Button onClick={() => signIn()}>Sign in</Button>
+                        )}  
                     </SimpleGrid>
                 </>
             </Box>

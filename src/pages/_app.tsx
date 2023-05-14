@@ -5,6 +5,8 @@ import theme from 'theme/theme'
 import { UserProvider} from '@auth0/nextjs-auth0/client';
 import { HandleAuth } from '@auth0/nextjs-auth0';
 import { handleAuth } from '@auth0/nextjs-auth0';
+import { SessionProvider } from 'next-auth/react'
+
 
 import 'styles/Fonts.css'
 import 'styles/App.css'
@@ -16,6 +18,7 @@ import Head from 'next/head'
 
 function MyApp ({ Component, pageProps }: AppProps) {
   return (
+    <SessionProvider> 
     <UserProvider>
     <ChakraProvider theme={theme}>
       <Head>
@@ -28,6 +31,9 @@ function MyApp ({ Component, pageProps }: AppProps) {
       </React.StrictMode>
     </ChakraProvider>
     </UserProvider>
+    </SessionProvider>
+
+
     
   )
 }
