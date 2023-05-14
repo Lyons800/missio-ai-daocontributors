@@ -60,6 +60,7 @@ const ProposalCard: React.FC<ProposalCardProps> = ({
               objectFit="cover"
               src={ProposalImageIcon}
               alt="Proposal Image"
+              
             />
           </Box>
           <Box width="60%" p="4" textAlign="left">

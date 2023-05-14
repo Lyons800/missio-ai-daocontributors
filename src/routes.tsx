@@ -3,6 +3,8 @@ import {
   MdBarChart,
   MdPerson,
   MdHome,
+  MdDocumentScanner,
+  MdEditDocument,
  
 } from 'react-icons/md'
 
@@ -26,7 +28,7 @@ const routes: IRoute[] = [
     name: 'Proposals',
     layout: '/admin',
     path: '/proposals',
-    icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
+    icon: <Icon as={MdDocumentScanner} width='20px' height='20px' color='inherit' />,
     component: MainDashboard
   },
  

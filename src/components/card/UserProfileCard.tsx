@@ -4,7 +4,6 @@ import {
   forwardRef,
   Flex,
   Text,
-  Image,
   Box,
   Icon,
   Link,
@@ -13,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa";
 import { ExternalLinkIcon, LinkIcon } from "@chakra-ui/icons";
+import Image from "next/image";
 
 const UserProfileCard = forwardRef((props, ref) => {
   const { avatar, name, discord, github, twitter, xp, size, variant, ...rest } = props;
@@ -37,6 +37,7 @@ const UserProfileCard = forwardRef((props, ref) => {
           src={avatar}
           alt={name}
           alignSelf="stretch"
+          priority
         />
       </Box>
       <Flex
