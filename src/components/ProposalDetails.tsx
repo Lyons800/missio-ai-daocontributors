@@ -18,7 +18,7 @@ const ProposalDetails = ({ id }) => {
   }, [id]);
 
   const fetchApiData = async () => {
-    const response = await fetch("http://localhost:8000/evaluate-feedback", {
+    const response = await fetch("http://10.32.16.207:8000/evaluate-feedback", {
       method: "POST",
     });
     const data = await response.json();
