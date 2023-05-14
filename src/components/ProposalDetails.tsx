@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import CustomCard from 'components/card/Card.tsx'; // Import CustomCard component
-import proposalsData from 'utils/data/proposals.json'; // replace with actual path
+import React, { useEffect, useState } from "react";
+import CustomCard from "components/card/Card.tsx"; // Import CustomCard component
+import proposalsData from "utils/data/proposals.json"; // replace with actual path
+import { Box } from "@chakra-ui/react"; // Import Box from Chakra UI
 
 const ProposalDetails = ({ id }) => {
   const [proposal, setProposal] = useState(null);
@@ -18,11 +19,23 @@ const ProposalDetails = ({ id }) => {
   }
 
   return (
-    <CustomCard> {/* Wrap the content with CustomCard */}
-      <div>
+    <CustomCard
+      position="relative" // Set position absolute on child
+      // top="100px" // Adjust this value as needed
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      height="50%" // Adjust height accordingly
+      width="80%"
+      mt="100"
+      mx="auto"
+    >
+      {" "}
+      {/* Set position relative on parent */}
+      <Box>
         <h1>{proposal.title}</h1>
         {/* Add more details about the proposal here */}
-      </div>
+      </Box>
     </CustomCard>
   );
 };
