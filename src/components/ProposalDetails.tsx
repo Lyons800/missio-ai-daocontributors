@@ -3,8 +3,9 @@ import CustomCard from "components/card/Card.tsx"; // Import CustomCard componen
 import proposalsData from "utils/data/proposals.json"; // replace with actual path
 
 import { Box, Button } from "@chakra-ui/react"; // Import Box from Chakra UI
-import { Spinner } from '@chakra-ui/react';
+import { Spinner } from "@chakra-ui/react";
 
+import QRCode from "qrcode.react"; // Import QRCode from qrcode.react
 
 const ProposalDetails = ({ id }) => {
   const [proposal, setProposal] = useState(null);
@@ -83,7 +84,7 @@ const ProposalDetails = ({ id }) => {
         )}
         {vcData && <pre>{JSON.stringify(vcData, null, 2)}</pre>}
         {vcData && <Button onClick={fetchQrCode}>Revieal QR Code</Button>}
-        {qrData && <pre>{JSON.stringify(qrData, null, 2)}</pre>}
+        {qrData && <QRCode value={JSON.stringify(qrData)} />}{" "}
       </Box>
     </CustomCard>
   );
