@@ -6,6 +6,8 @@ import { Box, Button } from "@chakra-ui/react"; // Import Box from Chakra UI
 const ProposalDetails = ({ id }) => {
   const [proposal, setProposal] = useState(null);
   const [apiData, setApiData] = useState(null);
+  const [vcData, setVcData] = useState(null);
+  const [qrData, setQrData] = useState(null);
 
   useEffect(() => {
     if (id) {
@@ -23,6 +25,30 @@ const ProposalDetails = ({ id }) => {
     setApiData(data);
   };
 
+  const mintVerifiableCredential = async () => {
+    const response = await fetch(
+      "http://localhost:8000/createClaim?score=100",
+      {
+        method: "POST",
+      }
+    );
+    const data = await response.json();
+    setVcData(data);
+  };
+
+  const fetchQrCode = async () => {
+    if (vcData && vcData.id) {
+      const response = await fetch(
+        `http://localhost:8000/qr-code?id=${vcData.id}&schema=KYCAgeCredential`,
+        {
+          method: "GET",
+        }
+      );
+      const data = await response.json();
+      setQrData(data);
+    }
+  };
+
   if (!proposal) {
     return <div>Proposal not found</div>;
   }
@@ -38,7 +64,7 @@ const ProposalDetails = ({ id }) => {
       width="80%"
       mt="100"
       mx="auto"
-      backgroundColor='#25242F'
+      // backgroundColor="#25242F"
     >
       {" "}
       {/* Set position relative on parent */}
@@ -47,6 +73,14 @@ const ProposalDetails = ({ id }) => {
         {/* Add more details about the proposal here */}
         <Button onClick={fetchApiData}>Fetch API Data</Button>
         {apiData && <pre>{JSON.stringify(apiData, null, 2)}</pre>}
+        {apiData && (
+          <Button onClick={mintVerifiableCredential}>
+            Mint Verifiable Credential
+          </Button>
+        )}
+        {vcData && <pre>{JSON.stringify(vcData, null, 2)}</pre>}
+        {vcData && <Button onClick={fetchQrCode}>Revieal QR Code</Button>}
+        {qrData && <pre>{JSON.stringify(qrData, null, 2)}</pre>}
       </Box>
     </CustomCard>
   );
