@@ -27,7 +27,7 @@ const ProposalDetails = ({ id }) => {
 
   const mintVerifiableCredential = async () => {
     const response = await fetch(
-      "http://localhost:8000/createClaim?score=100",
+      "http://10.32.16.207:8000/createClaim?score=100",
       {
         method: "POST",
       }
@@ -39,7 +39,7 @@ const ProposalDetails = ({ id }) => {
   const fetchQrCode = async () => {
     if (vcData && vcData.id) {
       const response = await fetch(
-        `http://localhost:8000/qr-code?id=${vcData.id}&schema=KYCAgeCredential`,
+        `http://10.32.16.207:8000/qr-code?id=${vcData.id}&schema=KYCAgeCredential`,
         {
           method: "GET",
         }
