@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CustomCard from "components/card/Card.tsx"; // Import CustomCard component
 import proposalsData from "utils/data/proposals.json"; // replace with actual path
 import { Box } from "@chakra-ui/react"; // Import Box from Chakra UI
+import { Spinner } from '@chakra-ui/react';
 
 const ProposalDetails = ({ id }) => {
   const [proposal, setProposal] = useState(null);

@@ -11,7 +11,7 @@ import ProposalCard from 'components/card/ProposalCard';
 import HoverCard from 'components/card/HoverCard'
 import { InfoOutlineIcon } from '@chakra-ui/icons';
 import { Tooltip } from '@chakra-ui/react';
-
+import ProfileImage from '/public/img/layout/Ellipse 97.svg'
 export default function profileOverview() {
   const { skills, values, qualityScore, relevancyScore } = contributorData;
 
@@ -19,7 +19,7 @@ export default function profileOverview() {
     <AdminLayout>
       <Box pt={{ base: '130px', md: '80px', xl: '80px' }} w="100%">
         <UserProfileCard
-          avatar={Avatar1}
+          avatar={ProfileImage}
           name='Lyons800'
           discord={true}
           github={false}
