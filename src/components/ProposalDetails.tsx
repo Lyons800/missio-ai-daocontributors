@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import CustomCard from "components/card/Card.tsx"; // Import CustomCard component
 import proposalsData from "utils/data/proposals.json"; // replace with actual path
-import { Box } from "@chakra-ui/react"; // Import Box from Chakra UI
+import { Box, Button } from "@chakra-ui/react"; // Import Box from Chakra UI
 
 const ProposalDetails = ({ id }) => {
   const [proposal, setProposal] = useState(null);
+  const [apiData, setApiData] = useState(null);
 
   useEffect(() => {
     if (id) {
@@ -13,6 +14,14 @@ const ProposalDetails = ({ id }) => {
       setProposal(foundProposal);
     }
   }, [id]);
+
+  const fetchApiData = async () => {
+    const response = await fetch("http://localhost:8000/evaluate-feedback", {
+      method: "POST",
+    });
+    const data = await response.json();
+    setApiData(data);
+  };
 
   if (!proposal) {
     return <div>Proposal not found</div>;
@@ -35,6 +44,8 @@ const ProposalDetails = ({ id }) => {
       <Box>
         <h1>{proposal.title}</h1>
         {/* Add more details about the proposal here */}
+        <Button onClick={fetchApiData}>Fetch API Data</Button>
+        {apiData && <pre>{JSON.stringify(apiData, null, 2)}</pre>}
       </Box>
     </CustomCard>
   );
