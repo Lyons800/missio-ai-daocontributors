@@ -29,6 +29,7 @@ const ProposalDetails = ({ id }) => {
       width="80%"
       mt="100"
       mx="auto"
+      backgroundColor='#25242F'
     >
       {" "}
       {/* Set position relative on parent */}
