@@ -1,6 +1,6 @@
 [
     {
-        "id": "AIP-169",
+        "id": "1",
         "title": "Beyond the SWAMP: Bimonthly ApeCoin & Yuga Labs Focused Magazine + NFT",
         "author": "AllCityBAYC",
         "body": "Beyond the SWAMP aims to produce a vibrant, high-quality collectible bimonthly magazine claimed through the sale of accompanying NFTs displaying each issue’s cover art. Content will focus on the ApeCoinDAO, ApeCoinDAO-led initiatives, successful ApeCoinDAO AIPs, and ApeCoin use cases; Yuga Labs and the growing number of projects under their umbrella; brands utilizing holder IP; diversity within regional meetup groups; female collectors; augmented reality through a sponsorship with Art House 4; gaming; art, tech and blockchain. All primary sales will be conducted in APE, contributors will be paid in APE and any future revenue raised from in-magazine advertising will be received in APE.",
@@ -15,7 +15,7 @@
         ]
     },
     {
-        "id": "AIP-200",
+        "id": "2",
         "title": "Add “Abstain” Option to Snapshot",
         "author": "Amplify",
         "body": "Proposal Category: Process\n\nAbstract: Adding the abstain option, in addition to “In Favor” and “Against” allows voters and delegates to participate in voting without having to take a side.\n\nMotivation: Adding abstain to voting allows users to vote on every proposal regardless of how they feel about the proposal. This would also allow ApeCoin DAO delegates to maintain a high voter participation rate.\n\nRationale: Many delegates and voters will simply not vote if they wish to vote against a proposal. This weakens the data for # of voters and # of votes and makes our DAO look less active than it really is.\n\nSpecifications: Add Abstain to Snapshot. Abstentions do not affect the outcome of the vote.\n\nSteps to Implement: The relevant parties responsible for Discourse and Snapshot will add the Abstain option to all future proposals in addition to “In Favor” and “Against”.\n\nTimeline: As soon as administratively possible\n\nOverall Cost: There is no overall cost to the DAO.",
@@ -36,7 +36,7 @@
         ]
     },
     {
-        "id": "AIP-226",
+        "id": "3",
         "title": "ApeCoinIRL - Decentralized Events Network",
         "author": "ssp1111",
         "body": "ApeCoinIRL aims to bring local, in-person gatherings to the ApeCoin Ecosystem by establishing a Decentralized Events Network. This network will create a seamless onboarding ramp for those entering Web3 and the ApeCoin ecosystem. Events will be hosted and managed by Local Champions, active members, and ambassadors from the community, including several BAYC/MAYC Clubs. The Events Network will integrate a master calendar, an events directory, a CRM, and ticketing apps. ApeCoinIRL will also serve as the IRL distribution network for all products and services born in the DAO.",
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "id": "AIP-212",
+        "id": "4",
         "title": "Forever Apes // Upgrade #7 // Enable Shopify to display $APE in eComm stores",
         "author": "12GAUGE, Brazy, HolocronApe",
         "body": "This proposal aims to develop a custom plugin to enable Shopify to display $APE as a currency on product pages. The plugin will be available to retailers at no cost, increasing visibility and encouraging wider adoption. The team plans to expand the plugin's availability to other eComm platforms once demand is proven.",
@@ -68,7 +68,7 @@
         ]
     },
     {
-        "id": "AIP-230",
+        "id": "5",
         "title": "I don’t hate apes, I just want them to fund public goods!",
         "author": "maariab",
         "body": "This AIP provides for $1,000,000 to fund crypto public goods through ETH Global and ApeCoin hackathons. The goal of this proposal is to 1) give back to the Ethereum community; 2) further development work around account abstraction; and 2) introduce developers to ApeCoin.",
@@ -80,7 +80,7 @@
         ]
     },
     {
-        "id": "AIP-184",
+        "id": "6",
         "title": "Ape Water powered by ApeCoin - Updated Proposal Formatting",
         "author": "ApeBeverages",
         "body": "Ape Beverages is a distribution vehicle for ApeCoin into the mass market at the most culturally relevant IRL experiences in the United States; including concerts, festivals, conferences, events and more. We are the first water + technology beverage company utilizing a 'smart can'. Enabling this new mass branding tool, we advertise our partners to propagate their company’s mission, while creating interactive experiences that educate, entertain and reward consumers...",

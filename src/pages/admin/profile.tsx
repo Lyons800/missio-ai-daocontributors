@@ -86,7 +86,7 @@ export default function profileOverview() {
                     backgroundColor="#383645"
                     foregroundColor="#A0A4F5"
                   />
-                  <Button fontSize="small" onClick={fetchQrCode}>
+                  <Button fontSize="small" onClick={fetchQrCode} backgroundColor='#5349C7'>
                     {" "}
                     Create PolygonID Credential{" "}
                   </Button>
@@ -105,7 +105,7 @@ export default function profileOverview() {
                     foregroundColor="#5056D2"
                     zIndex="999"
                   />
-                  <Button fontSize="small" onClick={fetchQrCode}>
+                  <Button fontSize="small" onClick={fetchQrCode} backgroundColor='#5349C7'>
                     {" "}
                     Create PolygonID Credential{" "}
                   </Button>

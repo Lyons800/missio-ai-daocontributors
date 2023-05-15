@@ -53,9 +53,9 @@ const ProposalDetails = ({ id }) => {
     }
   };
 
-  if (!proposal) {
-    return <div>Proposal not found</div>;
-  }
+  // if (!proposal) {
+  //   return <div>Proposal not found</div>;
+  // }
 
   return (
     <CustomCard
@@ -73,17 +73,17 @@ const ProposalDetails = ({ id }) => {
       {" "}
       {/* Set position relative on parent */}
       <Box>
-        <h1>{proposal.title}</h1>
+        {/* <h1>{proposal.title}</h1> */}
         {/* Add more details about the proposal here */}
-        <Button onClick={fetchApiData}>Fetch API Data</Button>
+        <Button onClick={fetchApiData} backgroundColor='#5349C7'>Fetch API Data</Button>
         {apiData && <pre>{JSON.stringify(apiData, null, 2)}</pre>}
         {apiData && (
-          <Button onClick={mintVerifiableCredential}>
+          <Button onClick={mintVerifiableCredential} backgroundColor='#5349C7'>
             Mint Verifiable Credential
           </Button>
         )}
         {vcData && <pre>{JSON.stringify(vcData, null, 2)}</pre>}
-        {vcData && <Button onClick={fetchQrCode}>Revieal QR Code</Button>}
+        {vcData && <Button onClick={fetchQrCode} backgroundColor='#5349C7'>Revieal QR Code</Button>}
         {qrData && <QRCode value={JSON.stringify(qrData)} />}{" "}
       </Box>
     </CustomCard>

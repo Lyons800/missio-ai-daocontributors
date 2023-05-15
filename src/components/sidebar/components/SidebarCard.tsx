@@ -20,7 +20,7 @@ export default function SidebarDocs ({ userName, userXP, userAvatar }) {
         <Text color="white" ml={3}>{userName} Lyons800</Text>
         <Spacer />
         <Box backgroundColor={bgColor} borderRadius="35px" p={2} mr={2}>
-          <Text color="#5F55D6">{`XP: 150`}</Text>
+          <Text color="#5F55D6">{`XP: 1200`}</Text>
         </Box>
       </Flex>
     </CustomCard>
